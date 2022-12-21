@@ -1,0 +1,25 @@
+{
+	"name": "xq-banner",
+	"version": "1.0.7",
+	"description": "为nodejs项目构建后生成的dist目录下的所有js文件，根据package.json的信息自动在起始位置生成版权信息！",
+	"type": "module",
+	"files": [
+		"bin"
+	],
+	"bin": {
+		"xq-banner": "./bin/banner.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xqkeji/xq-banner.git"
+	},
+	"keywords": [
+		"HTML5",
+		"JavaScript",
+		"Nodejs",
+		"Banner"
+	],
+	"author": "xqkeji.cn",
+	"license": "SSPL-1.0",
+	"homepage": "https://xqkeji.cn/"
+}
