@@ -27,28 +27,29 @@ const banner = `/*!
  */
  `
 
-  
-//解析需要遍历的文件夹，我这以E盘根目录为例  
-const filePath = path.resolve(__dirname, '../../../dist'); 
-
-fs.readdir(filePath,function(err,files){  
-    if(err){  
-        console.warn(err)  
-    }else{  
-        //遍历读取到的文件列表  
-        files.forEach(function(filename)
-        {  
-            const ext=path.extname(filename);
-            if(ext==".cjs"||ext==".ts"||ext==".d.ts"||ext==".mjs"||ext==".js")
-            {
-                //获取当前文件的绝对路径  
-                const file = path.join(filePath,filename);
-                const content=fs.readFileSync(file).toString();
-                if(!content.startsWith(banner))
+//解析需要遍历的文件夹 
+const paths = ["dist", "dist/js", "dist/ts", "dist/css", "dist/scss"]
+paths.map((pathItem) => {
+	const filePath = path.resolve(__dirname, '../../../'+pathItem); 
+    fs.readdir(filePath,function(err,files){  
+        if(!err){    
+            //遍历读取到的文件列表  
+            files.forEach(function(filename)
+            {  
+                const ext=path.extname(filename);
+                if(ext==".cjs"||ext==".ts"||ext==".d.ts"||ext==".mjs"||ext==".js"||ext==".scss"||ext==".css")
                 {
-                    fs.writeFileSync(file,banner+content);
-                }
-            } 
-        });  
-    }
+                    //获取当前文件的绝对路径  
+                    const file = path.join(filePath,filename);
+                    const content=fs.readFileSync(file).toString();
+                    if(!content.startsWith(banner))
+                    {
+                        fs.writeFileSync(file,banner+content);
+                    }
+                } 
+            });  
+        }
+    })
+	
+	
 })

@@ -1,6 +1,6 @@
 # xq-banner
 
-为nodejs项目构建后生成的dist目录下的所有js、ts、cjs、mjs等文件，根据package.json的信息自动在文件起始位置生成相应的版权信息！
+为nodejs项目构建后生成的dist目录以及js、css、ts、scss等子目录的所有js、css、scss、ts、cjs、mjs等类型的文件，根据package.json的信息自动在文件起始位置生成相应的版权信息！
 
 ## 安装
 

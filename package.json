@@ -1,6 +1,6 @@
 {
 	"name": "xq-banner",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "为nodejs项目构建后生成的dist目录下的所有js文件，根据package.json的信息自动在起始位置生成版权信息！",
 	"type": "module",
 	"files": [
