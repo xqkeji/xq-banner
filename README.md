@@ -1,6 +1,7 @@
 # xq-banner
 
 为nodejs项目构建后生成的dist目录以及js、css、ts、scss等子目录的所有js、css、scss、ts、cjs、mjs等类型的文件，根据package.json的信息自动在文件起始位置生成相应的版权信息！
+同时也支持通过命令行参数来指定需要添加代码版权信息的目录。
 
 ## 安装
 
@@ -13,6 +14,14 @@ npm i xq-banner
 ```bash
 npx xq-banner
 ```
+### 备注
+
+如果需要指定dist之外的目录，可以携带命令行参数。
+例如：
+```bash
+npx xq-banner src/js src/css src/ts
+```
+src/js、src/css、src/ts代表用户指定的目录，采用相对路径。
 
 ## 应用示例
 

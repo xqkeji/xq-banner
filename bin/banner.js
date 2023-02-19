@@ -26,9 +26,10 @@ const banner = `/*!
  * Copyright ${year} ${pkg.author}
  */
  `
-
+const args=process.argv.splice(2)
 //解析需要遍历的文件夹 
-const paths = ["dist", "dist/js", "dist/ts", "dist/css", "dist/scss"]
+const defaultPaths = ["dist", "dist/js", "dist/ts", "dist/css", "dist/scss"]
+const paths=defaultPaths.concat(args)
 paths.map((pathItem) => {
 	const filePath = path.resolve(__dirname, '../../../'+pathItem); 
     fs.readdir(filePath,function(err,files){  
