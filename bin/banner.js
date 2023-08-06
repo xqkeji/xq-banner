@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * xq-banner v1.0.0 (https://xqkeji.cn/)
+ * xq-banner v1.0.10 (https://xqkeji.cn/)
  * Author xqkeji.cn
  * LICENSE SSPL-1.0
- * Copyright 2022 xqkeji.cn
+ * Copyright 2023 xqkeji.cn
  */
 import * as fs from 'fs';
 import * as path from 'path'
