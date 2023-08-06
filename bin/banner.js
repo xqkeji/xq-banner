@@ -35,8 +35,7 @@ paths.map((pathItem) => {
     fs.readdir(filePath,function(err,files){  
         if(!err){    
             //遍历读取到的文件列表  
-            files.forEach(function(filename)
-            {  
+            files.forEach(function(filename){  
                 const ext=path.extname(filename);
                 if(ext==".cjs"||ext==".ts"||ext==".d.ts"||ext==".mjs"||ext==".js"||ext==".scss"||ext==".css")
                 {
@@ -51,6 +50,4 @@ paths.map((pathItem) => {
             });  
         }
     })
-	
-	
 })
