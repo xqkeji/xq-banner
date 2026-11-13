@@ -2,7 +2,7 @@
 /**
  * xq-banner v1.0.10 (https://xqkeji.cn/)
  * Author xqkeji.cn
- * LICENSE AGPL-3.0
+ * LICENSE AGPL-3.0-only
  * Copyright 2023 xqkeji.cn
  */
 import * as fs from 'fs';
